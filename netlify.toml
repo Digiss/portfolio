@@ -1,0 +1,9 @@
+# Netlify config: build from repo root and publish the Vite `dist` folder
+[build]
+  base = "."
+  command = "npm run build"
+  publish = "dist"
+
+# Optional: uncomment and set Node version if needed
+#[build.environment]
+#  NODE_VERSION = "18"
