@@ -2,20 +2,10 @@ import './hero.css';
 import { useEffect, useState } from 'react';
 
 function Hero() {
-  const [scrolled, setScrolled] = useState(false);
   const [iniciado, setiniciado] = useState(false);
 
   useEffect(() => {
     setiniciado(true);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > -1 && window.scrollY < 1900);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
   return (
